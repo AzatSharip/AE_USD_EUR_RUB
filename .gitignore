@@ -1,0 +1,9 @@
+get_courses.aep Logs/
+render/
+Courses/*.html
+
+__pycache__/
+
+
+
+
