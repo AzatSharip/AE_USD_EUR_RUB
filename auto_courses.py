@@ -16,7 +16,7 @@ def write_data():
 
 def write_prop_to_bat():
     with open("runer.bat", 'w') as file:
-        file.write('chcp 1251\n"C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\\aerender.exe" -project D:\Personal\GitHub\AE\Courses\get_courses.aep -comp KURSI -OMtemplate KURSI -output D:\Personal\GitHub\AE\Courses\\render\KURSI_[#####].png')
+        file.write('chcp 1251\n"C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\\aerender.exe" -project D:\Personal\GitHub\AE\Courses\get_courses.aep -comp KURSI -OMtemplate KURSI -output D:\Personal\GitHub\AE_USD_EUR_RUB\\render\KURSI_[#####].png')
 
 def bat_run():
     program = "runer.bat"
@@ -48,10 +48,10 @@ def make_dir():
 
 
 def teleport_files():
-    for rootdir, dirs, files in os.walk("D:\Personal\GitHub\AE\Courses\\render"):
+    for rootdir, dirs, files in os.walk("D:\Personal\GitHub\AE_USD_EUR_RUB\\render"):
         for file in files:
-            shutil.copy("D:\\Personal\\GitHub\\AE\\Courses\\render\\" + file, str(path_in_office))
-            print("D:\\Personal\\GitHub\\AE\\Courses\\render\\" + file, str(path_in_office))
+            shutil.copy("D:\\Personal\\GitHub\\AE_USD_EUR_RUB\\render\\" + file, str(path_in_office))
+            print("D:\\Personal\\GitHub\\AE_USD_EUR_RUB\\render\\" + file, str(path_in_office))
 
 
 write_data()
