@@ -1,7 +1,10 @@
+*.html
 get_courses.aep Logs/
 render/
-*.html
 __pycache__/
+
+
+
 
 
 
