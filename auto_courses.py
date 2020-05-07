@@ -13,10 +13,13 @@ def write_data():
         file.write('var doll_minus = ["{}"];\nvar euro_minus = ["{}"];'.format(courses.doll_arrow, courses.euro_arrow) + '\n')
         file.write('var comp_doll = ["{}","{}","{}","{}"];'.format(best_courses.doll_buy, best_courses.doll_buy_b, best_courses.doll_sale, best_courses.doll_sale_b) + '\n')
         file.write('var comp_euro = ["{}","{}","{}","{}"];'.format(best_courses.euro_buy, best_courses.euro_buy_b, best_courses.euro_sale, best_courses.euro_sale_b) + '\n')
+        file.write('var plus_euro = ["{}"];'.format(courses.euro_null) + '\n')
+        file.write('var plus_doll = ["{}"];'.format(courses.doll_null))
+
 
 def write_prop_to_bat():
     with open("runer.bat", 'w') as file:
-        file.write('chcp 1251\n"C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\\aerender.exe" -project D:\Personal\GitHub\AE\Courses\get_courses.aep -comp KURSI -OMtemplate KURSI -output D:\Personal\GitHub\AE_USD_EUR_RUB\\render\KURSI_[#####].png')
+        file.write('chcp 1251\n"C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\\aerender.exe" -project D:\Personal\GitHub\AE_USD_EUR_RUB\get_courses.aep -comp KURSI -OMtemplate KURSI -output D:\Personal\GitHub\AE_USD_EUR_RUB\\render\KURSI_ver21_[#####].png')
 
 def bat_run():
     program = "runer.bat"
@@ -54,9 +57,13 @@ def teleport_files():
             print("D:\\Personal\\GitHub\\AE_USD_EUR_RUB\\render\\" + file, str(path_in_office))
 
 
-write_data()
-print('Data.txt recorded successfully!')
-write_prop_to_bat()
-bat_run()
-make_dir()
-teleport_files()
+def main():
+    write_data()
+    print('Data.txt recorded successfully!')
+    write_prop_to_bat()
+    bat_run()
+    make_dir()
+    #teleport_files()
+
+if __name__ == '__main__':
+    main()

@@ -26,10 +26,15 @@ with open('cbrf.html', 'rb') as output_file:
     if doll_dyn < 0:
         doll_arrow = 100
         doll_dynamics = doll_dyn * -1
+        doll_null = 100
     elif doll_dyn > 0:
         doll_arrow = 0
         doll_dynamics = doll_dyn
+        doll_null = 100
     else:
+        doll_dynamics = doll_dyn
+        doll_arrow = 0
+        doll_null = 0  # Opacity of layer with arrow on doll_plus composition, "0" means 0%
         print('No changes in doll dynamics!')
 
 
@@ -38,10 +43,15 @@ with open('cbrf.html', 'rb') as output_file:
     if euro_dyn < 0:
         euro_arrow = 100
         euro_dynamics = euro_dyn * -1
+        euro_null = 100
     elif euro_dyn > 0:
         euro_arrow = 0
         euro_dynamics = euro_dyn
+        euro_null = 100
     else:
+        euro_dynamics = euro_dyn
+        euro_arrow = 0
+        euro_null = 0 # Opacity of layer with arrow on euro_plus composition, "0" means 0%
         print('No changes in euro dynamics!')
 
 
