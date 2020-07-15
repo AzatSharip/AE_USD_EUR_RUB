@@ -19,7 +19,7 @@ def write_data():
 
 def write_prop_to_bat():
     with open("runer.bat", 'w') as file:
-        file.write('chcp 1251\n"C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\\aerender.exe" -project D:\Personal\GitHub\AE_USD_EUR_RUB\get_courses.aep -comp KURSI -OMtemplate KURSI -output D:\Personal\GitHub\AE_USD_EUR_RUB\\render\KURSI_ver21_[#####].png')
+        file.write('chcp 1251\n"C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\\aerender.exe" -project D:\Personal\GitHub\AE_USD_EUR_RUB\get_courses.aep -comp KURSI -OMtemplate KURSI -output D:\Personal\GitHub\AE_USD_EUR_RUB\\render\KURSI_[#####].png')
 
 def bat_run():
     program = "runer.bat"
@@ -63,7 +63,7 @@ def main():
     write_prop_to_bat()
     bat_run()
     make_dir()
-    #teleport_files()
+    teleport_files()
 
 if __name__ == '__main__':
     main()
