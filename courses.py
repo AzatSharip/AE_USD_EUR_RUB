@@ -15,12 +15,12 @@ with open('cbrf.html', 'rb') as output_file:
     soup = BeautifulSoup(text, features="lxml")
 
 
-    all_doll_euro = soup.find_all('div', {'class': 'indicator_el_value mono-num'})[0].get_text()
+    all_doll_euro = soup.find_all('div', {'class': 'col-md-2 col-xs-9 _right mono-num'})[0].get_text()
 
-    pre_doll = float(soup.find_all('div', {'class': 'indicator_el_value mono-num'})[0].get_text().replace('₽', '').replace(',', '.'))
-    cur_doll = float(soup.find_all('div', {'class': 'indicator_el_value mono-num'})[1].get_text().replace('₽', '').replace(',', '.'))
-    pre_euro = float(soup.find_all('div', {'class': 'indicator_el_value mono-num'})[2].get_text().replace('₽', '').replace(',', '.'))
-    cur_euro = float(soup.find_all('div', {'class': 'indicator_el_value mono-num'})[3].get_text().replace('₽', '').replace(',', '.'))
+    pre_doll = float(soup.find_all('div', {'class': 'col-md-2 col-xs-9 _right mono-num'})[0].get_text().replace('₽', '').replace(',', '.'))
+    cur_doll = float(soup.find_all('div', {'class': 'col-md-2 col-xs-9 _right mono-num'})[1].get_text().replace('₽', '').replace(',', '.'))
+    pre_euro = float(soup.find_all('div', {'class': 'col-md-2 col-xs-9 _right mono-num'})[2].get_text().replace('₽', '').replace(',', '.'))
+    cur_euro = float(soup.find_all('div', {'class': 'col-md-2 col-xs-9 _right mono-num'})[3].get_text().replace('₽', '').replace(',', '.'))
 
     doll_dyn = round((cur_doll - pre_doll), 2)
     if doll_dyn < 0:
