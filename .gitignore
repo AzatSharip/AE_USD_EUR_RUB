@@ -5,6 +5,9 @@ get_courses.aep Logs/
 Adobe After Effects Auto-Save/
 render/
 __pycache__/
+build/
+dist/
+test.py
 
 
 
